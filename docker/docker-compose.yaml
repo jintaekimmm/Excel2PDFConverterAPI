@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    image: e2p-conv-api:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.local
+    container_name: e2p-conv-api
+    command: uvicorn --app-dir ./project app.main:app --reload --host 0.0.0.0 --port 8000 --proxy-headers --forwarded-allow-ips "*"
+    volumes:
+      - ..:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=local

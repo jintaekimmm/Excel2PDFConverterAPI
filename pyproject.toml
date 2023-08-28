@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "excel2pdfconverterapi"
+version = "0.1.0"
+description = ""
+authors = ["jintaekimmm <jintae.kimmm@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.101.1"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+black = "^23.7.0"
+sqlalchemy = "^2.0.20"
+asyncmy = "^0.2.8"
+loguru = "^0.7.0"
+pydantic-settings = "^2.0.3"
+pre-commit = "^3.3.3"
+gunicorn = "^21.2.0"
+python-multipart = "^0.0.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
